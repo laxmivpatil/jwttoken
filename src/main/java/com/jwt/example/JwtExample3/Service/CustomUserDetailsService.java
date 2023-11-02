@@ -14,12 +14,12 @@ public class CustomUserDetailsService  implements UserDetailsService{
 
 	
 	@Autowired
-	UserRepository userRepository;
+	UserRepository userRepository1;
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 		System.out.println("hi ");
-	User user=	userRepository.findByEmail(username).orElseThrow(()->new RuntimeException());
+	User user=	userRepository1.findByEmail(username).orElseThrow(()->new RuntimeException());
 	//	User user=	userRepository.findByEmail(username).get();
 		
 		
